@@ -1,0 +1,147 @@
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = (unset),
+	(possibly more locale environment variables)
+	LANG = "zh_CN.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the system default locale ("Chinese (Simplified)_China.936").
+Locale 'Chinese (Simplified)_China.936' is unsupported, and may crash the interpreter.
+Initial Win CP for (console input, console output, system): (CP936, CP65001, CP936)
+I changed them all to CP936
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'xelatex'...
+Rule 'xelatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'xelatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'xelatex'
+------------
+------------
+Running 'xelatex -no-pdf -synctex=1 -interaction=batchmode -file-line-error -shell-escape -recorder  "markdown.tex"'
+------------
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex.fmt)
+ \write18 enabled.
+entering extended mode
+SyncTeX written on markdown.synctex.gz.
+Latexmk: Getting log file 'markdown.log'
+Latexmk: Examining 'markdown.fls'
+Latexmk: Examining 'markdown.log'
+Latexmk: References changed.
+Latexmk: Missing bbl file 'markdown.bbl' in following:
+ No file markdown.bbl.
+Latexmk: References changed.
+Latexmk: References changed.
+Latexmk: Log file says output to 'markdown.xdv'
+Latexmk: Using bibtex to make bibliography file(s).
+  ===Source file 'markdown.bbl' for 'xelatex'
+Create bibtex markdown
+Latexmk: Found bibliography file(s):
+  ./main.bib
+Latexmk: applying rule 'bibtex markdown'...
+Rule 'bibtex markdown':  Reasons for rerun
+Category 'other':
+  Rerun of 'bibtex markdown' forced or previously required:
+    Reason or flag: 'Initial set up of rule'
+
+------------
+Run number 1 of rule 'bibtex markdown'
+------------
+------------
+Running 'bibtex  "markdown.aux"'
+------------
+This is BibTeX, Version 0.99d (MiKTeX 25.4)
+The top-level auxiliary file: markdown.aux
+The style file: abbrvnat.bst
+Database file #1: main.bib
+Latexmk: applying rule 'xelatex'...
+Rule 'xelatex':  Reasons for rerun
+Changed files or newly in use/created:
+  markdown.aux
+  markdown.bbl
+  markdown.out
+
+------------
+Run number 2 of rule 'xelatex'
+------------
+------------
+Running 'xelatex -no-pdf -synctex=1 -interaction=batchmode -file-line-error -shell-escape -recorder  "markdown.tex"'
+------------
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex.fmt)
+ \write18 enabled.
+entering extended mode
+SyncTeX written on markdown.synctex.gz.
+Latexmk: Getting log file 'markdown.log'
+Latexmk: Examining 'markdown.fls'
+Latexmk: Examining 'markdown.log'
+Latexmk: Found input bbl file 'markdown.bbl'
+Latexmk: References changed.
+Latexmk: Log file says output to 'markdown.xdv'
+Latexmk: Using bibtex to make bibliography file(s).
+  ===Source file 'markdown.bbl' for 'xelatex'
+Latexmk: Found bibliography file(s):
+  ./main.bib
+Latexmk: applying rule 'bibtex markdown'...
+Rule 'bibtex markdown':  Reasons for rerun
+Changed files or newly in use/created:
+  markdown.aux
+
+------------
+Run number 2 of rule 'bibtex markdown'
+------------
+------------
+Running 'bibtex  "markdown.aux"'
+------------
+This is BibTeX, Version 0.99d (MiKTeX 25.4)
+The top-level auxiliary file: markdown.aux
+The style file: abbrvnat.bst
+Database file #1: main.bib
+Latexmk: applying rule 'xelatex'...
+Rule 'xelatex':  Reasons for rerun
+Changed files or newly in use/created:
+  markdown.aux
+
+------------
+Run number 3 of rule 'xelatex'
+------------
+------------
+Running 'xelatex -no-pdf -synctex=1 -interaction=batchmode -file-line-error -shell-escape -recorder  "markdown.tex"'
+------------
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex.fmt)
+ \write18 enabled.
+entering extended mode
+SyncTeX written on markdown.synctex.gz.
+Latexmk: Getting log file 'markdown.log'
+Latexmk: Examining 'markdown.fls'
+Latexmk: Examining 'markdown.log'
+Latexmk: Found input bbl file 'markdown.bbl'
+Latexmk: Log file says output to 'markdown.xdv'
+Latexmk: Using bibtex to make bibliography file(s).
+  ===Source file 'markdown.bbl' for 'xelatex'
+Latexmk: Found bibliography file(s):
+  ./main.bib
+Latexmk: applying rule 'xdvipdfmx'...
+Rule 'xdvipdfmx':  Reasons for rerun
+Changed files or newly in use/created:
+  markdown.xdv
+Category 'changed_source_rules':
+  xelatex
+Category 'no_dest':
+  xdvipdfmx
+
+------------
+Run number 1 of rule 'xdvipdfmx'
+------------
+------------
+Running 'xdvipdfmx -E -o "markdown.pdf"  "markdown.xdv"'
+------------
+markdown.xdv -> markdown.pdf
+[1][2][3][4]
+1085229 bytes written
+Latexmk: All targets (markdown.xdv markdown.pdf) are up-to-date
+
+Reverting Windows console CPs to (in,out) = (936,65001)
